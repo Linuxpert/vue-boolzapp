@@ -4,3 +4,19 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+/* sfondo */
+#container-background{
+    position: relative;
+}
+
+#green-slide {
+    background-color: rgb(0, 202, 108);
+    height: 200px;
+}
+
+#grey-part {
+    background-color: lightgray;
+    height: calc(100vh - 200px);
+}
