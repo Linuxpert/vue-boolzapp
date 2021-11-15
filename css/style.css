@@ -7,16 +7,220 @@
 
 
 /* sfondo */
-#container-background{
-    position: relative;
-}
-
 #green-slide {
     background-color: rgb(0, 202, 108);
     height: 200px;
 }
 
-#grey-part {
-    background-color: lightgray;
-    height: calc(100vh - 200px);
+body {
+    background-color: rgb(224, 224, 224);
+}
+/* messaggi */
+#container-messages{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    height: calc(100vh - 40px);
+    width: 80%;
+    display: flex;
+}
+
+/* main */
+aside{
+    width: 40%;
+}
+
+main{
+    width: 60%;
+    /* debug */
+    background-color: rgb(245, 239, 206);
+}
+
+/* aside e main */
+.username{
+    height: 70px;
+    border: 1px solid rgb(163, 162, 162);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(236, 230, 230);
+}
+.img-user{
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+.img-user img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+}
+
+#option{
+    width: 30% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#option .fas{
+    font-size: 30px;
+    color: rgb(138, 135, 135);
+    cursor: pointer;
+}
+/* aside */
+#notifications {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: cornflowerblue;
+}
+
+/* notifications */
+#bell{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px 0 30px ;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    background-color: white;
+}
+#bell .fas{
+    color: cornflowerblue;
+}
+
+#notif-text h2{
+    font-size: 20px;
+}
+#notif-text a {
+    color: grey;
+}
+
+/* box search */
+.search {
+    height: 70px;
+    border-top: 1px solid rgb(163, 162, 162);
+    /* debug */
+    background-color: rgb(255, 255, 255);
+}
+
+.box-search{
+    margin: 10px auto;
+    width: 90%;
+    height: 50px;
+    border: solid 1px lightgray;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.search-icon {
+    height: 100%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#search-inp{
+    width: 60%;
+    height: 40px;
+    border: none;
+}
+
+/* chat */
+#people{
+    height: calc(100% - 210px);
+    overflow: auto;
+    background-color: white;
+}
+
+.box-chat:hover{
+    background-color: rgba(146, 143, 143, 0.205);
+    cursor: pointer;
+}
+.box-chat{
+    height: 70px;
+    display: flex;
+    background-color: white;
+}
+
+.img-avatar {
+    height: 60px;
+    width: 60px;
+    margin: 5px 10px 0 30px;
+}
+
+.img-avatar img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.text h1 {
+    margin-top: 10px;
+}
+.text p {
+    color: lightgray;
+}
+
+/* main */
+.img-friend{
+    height: 60px;
+    width: 60px;
+    margin-left: 10px;
+}
+.img-friend img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.friend-chat {
+    display: flex;
+    align-items: center;
+}
+
+.name-friend{
+    margin-left: 10px;
+}
+.name-friend p{
+    color: rgb(155, 154, 154);  
+}
+
+.chat-friend{
+    position: relative;
+    height: calc(100% - 70px);
+}
+
+#chat-option{
+    width: 30% ;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#chat-option .fas{
+    font-size: 30px;
+    color: rgb(138, 135, 135);
+    cursor: pointer;
+}
+
+/* footer */
+#input-message {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background-color: rgb(236, 230, 230);
+    display: flex;
 }

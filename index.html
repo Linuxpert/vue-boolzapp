@@ -11,15 +11,103 @@
 <body>
     
     <!-- sfondo -->
-    <div id="container-background">
-        <div id="green-slide"></div>
+    <div id="green-slide">
+        <!-- messaggi -->
+        <div id="container-messages">
+            <!-- aside -->
+            <aside>
+                <div class="username">
+                    <div class="user">
+                        <div class="img-user">
+                            <img src="img/avatar_io.jpg" alt="">
+                        </div>
+                        <div class="name-user">
+                            <h1>Nome Utente</h1>
+                        </div>
+                    </div>
+                    
+                    <div id="option">
+                        <span>  <i class="fas fa-circle-notch"></i></span>
+                        <span> <i class="fas fa-comment-alt"></i></span>
+                        <span> <i class="fas fa-ellipsis-v"></i></span> 
+                    </div>
+                    
+                </div>
 
-        <div id="grey-part"></div>
+                <div id="notifications">
+                    <div id="bell">
+                        <i class="fas fa-bell-slash"></i>
+                    </div>
+                    <div id="notif-text">
+                        <h2>
+                            Ricevi notifiche di nuovi messaggi
+                        </h2>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </div>
+                </div>
+
+                <div class="search">
+                    <div class="box-search">
+
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        
+                        <input type="text" placeholder="cerca o inizia una nuova chat" id="search-inp">
+                    </div>
+                </div>
+                <!-- chat -->
+                <div id="people">
+                    <div id="michele" class="box-chat">
+                        <div class="img-avatar">
+                            <img src="img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="text">
+                            <h1>Michele</h1>
+                            <p>text</p>
+                        </div>
+                    </div>
+                </div>
+                
+            </aside>
+
+            <!-- main -->
+            <main>
+                <div class="username">
+                    <div class="friend-chat">
+                        <div class="img-friend">
+                            <img src="img/avatar_1.jpg" alt="">
+                        </div>
+                        <div class="name-friend">
+                            <h1>Michele</h1>
+                            <p>Ultimo accesso</p>
+                        </div>
+                    </div>
+
+                    <div id="chat-option">
+                        <span>  <i class="fas fa-search"></i></span>
+                        <span> <i class="fas fa-paperclip"></i></span>
+                        <span> <i class="fas fa-ellipsis-v"></i></span> 
+                    </div>
+                </div>
+
+                <div class="chat-friend">
+
+
+                    <div id="input-message">
+
+                    </div>
+                </div>
+
+                
+            </main>
+
+        </div>
     </div>
+
     
-    <!-- messaggi -->
-        <!-- main -->
-        <!-- aside -->
+    
+    
 
     <script src="js/script.js"></script>
 </body>
