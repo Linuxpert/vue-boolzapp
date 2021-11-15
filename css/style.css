@@ -223,4 +223,24 @@ main{
     height: 70px;
     background-color: rgb(236, 230, 230);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#enter-text{
+    width: 70%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#enter-text input {
+    border: none;
+}
+
+.emoji{
+    font-size: 25px;
+}
+.emoji:hover{
+    cursor: pointer;
 }
