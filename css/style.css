@@ -218,7 +218,7 @@ main{
     /* background-color: blue; */
 }
 
-.sent{
+.sentMess{
     /* float: right; */
     background-color: greenyellow;
     padding: 15px;
@@ -230,7 +230,7 @@ main{
 /* .sent.active{
     display: block;
 } */
-.received{
+.receivedMess{
     /* float: left; */
     background-color: rgb(230, 231, 227);
     padding: 15px;

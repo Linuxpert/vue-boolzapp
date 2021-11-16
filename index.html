@@ -75,12 +75,12 @@
             <main>
                 <div class="username">
                     <div class="friend-chat">
-                        <div class="img-friend">
-                            <img src="img/avatar_1.jpg" alt="">
+                        <div class="img-friend" class="active">
+                            <img :src="contacts[activeChat].avatar" alt="">
                         </div>
                         <div class="name-friend">
-                            <h1>Michele</h1>
-                            <p>Ultimo accesso</p>
+                            <h1>{{contacts[activeChat].name}}</h1>
+                            <p>Ultimo accesso alle: {{contacts[activeChat].messages[activeChat].date}}</p>
                         </div>
                     </div>
 
@@ -95,9 +95,13 @@
 
                     <div id="container-chat">
                         
-                        <div  v-for="message, i in contacts.messages" :key="i" :class="message.status === 'sent' ? 'sent' : 'received' ">
-                            <p>{{message.text}}</p>
-                            <article class="data">{{messages.date}}</article>
+                        <div  v-for="message, i in contacts[activeChat].messages" :key="i">
+
+                            <div :class="message.status === 'sent' ? 'sentMess' : 'receivedMess' ">
+                                <p>{{message.text}}</p>
+                                <article class="data">{{message.date}}</article>
+                            </div>
+                            
                         </div>
                     
 

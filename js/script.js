@@ -1,5 +1,5 @@
 var boolzapp = new Vue({
-    el: "#people",
+    el: "#container-messages",
     data:{
         activeChat: 0,
         contacts: [
@@ -80,8 +80,8 @@ var boolzapp = new Vue({
                         status: 'sent'
                     },
                     {
-                        date: ' 10/01/2020 15:50:00',
-                        text: ' Si, ma preferirei andare al cinema',
+                        date: '10/01/2020 15:50:00',
+                        text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     }
                 ],
@@ -91,13 +91,11 @@ var boolzapp = new Vue({
     },
     methods: {
         newChat: function(){
-            // if(this.activeChat === this.contacts.length -1){
-            //     this.activeChat = 0;
-            // }else{
-            //     this.activeChat ++;
-            // }
-            this.activeChat = this.contacts[i].length
-            console.log(activeChat);
+            if(this.activeChat === this.contacts.length -1){
+                this.activeChat = 0;
+            }else{
+                this.activeChat ++;
+            }
         }
     }
 });
