@@ -151,6 +151,7 @@ main{
     height: 70px;
     display: flex;
     background-color: white;
+    position: relative;
 }
 
 .box-chat.active{
@@ -175,6 +176,15 @@ main{
 }
 .text p {
     color: lightgray;
+}
+
+.dataContact{
+    font-size: 10px;
+    color: grey;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 10px;
 }
 
 /* main */
@@ -214,43 +224,28 @@ main{
     position: absolute;
     top: 20px;
     left: 85px;
-    /* debug */
-    /* background-color: blue; */
 }
 
 .sentMess{
-    /* float: right; */
     background-color: greenyellow;
     padding: 15px;
     border-radius: 10px;
     margin: 0 0 10px 70%;
-    /* display: none; */
 
 }
-/* .sent.active{
-    display: block;
-} */
+
 .receivedMess{
-    /* float: left; */
     background-color: rgb(230, 231, 227);
     padding: 15px;
     border-radius: 10px;
-    margin: 0 70% 10px 0;
-    /* display: none; */
+    margin: 0 70% 10px 0; 
 }
-/* .received.active{
-    display: block;
-} */
 
 .data{
     font-size: 10px;
     color: grey;
     float: right;
-    /* display: none; */
 }
-/* .data.active{
-    display: block;
-} */
 #chat-option{
     width: 30% ;
     display: flex;

@@ -16,6 +16,7 @@
         <div id="container-messages">
             <!-- aside -->
             <aside>
+                <!-- nome utente -->
                 <div class="username">
                     <div class="user">
                         <div class="img-user">
@@ -26,6 +27,7 @@
                         </div>
                     </div>
                     
+                    <!-- icone di fianco all'utente -->
                     <div id="option">
                         <span>  <i class="fas fa-circle-notch"></i></span>
                         <span> <i class="fas fa-comment-alt"></i></span>
@@ -34,6 +36,7 @@
                     
                 </div>
 
+                <!-- attiva notifiche -->
                 <div id="notifications">
                     <div id="bell">
                         <i class="fas fa-bell-slash"></i>
@@ -46,6 +49,7 @@
                     </div>
                 </div>
 
+                <!-- barra di ricerca contatti -->
                 <div class="search">
                     <div class="box-search">
 
@@ -58,13 +62,17 @@
                 </div>
                 <!-- chat -->
                 <div id="people">
-                    <div class="box-chat" v-for="(contact , i) in contacts" :key="i" :class="i === activeChat ? 'active' : '' " @click="newChat">
+                    <div class="box-chat" v-for="contact , i in contacts" :key="i" :class="i === activeChat ? 'active' : '' " @click="newChat(i)">
                         <div class="img-avatar">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
                         <div class="text">
                             <h1>{{contact.name}}</h1>
-                            <p>text</p>
+                            <p>{{contact.messages[contact.messages.length -1].text}}</p>
+                        </div>
+
+                        <div class="dataContact">
+                            <p>{{contact.messages[contact.messages.length -1].date}}</p>
                         </div>
                     </div>
                 </div>
@@ -73,6 +81,7 @@
 
             <!-- main -->
             <main>
+                <!-- nome amico -->
                 <div class="username">
                     <div class="friend-chat">
                         <div class="img-friend" class="active">
@@ -80,10 +89,11 @@
                         </div>
                         <div class="name-friend">
                             <h1>{{contacts[activeChat].name}}</h1>
-                            <p>Ultimo accesso alle: {{contacts[activeChat].messages[activeChat].date}}</p>
+                            <p>Ultimo accesso alle: BOOOOH</p>
                         </div>
                     </div>
 
+                    <!-- icone a fianco dell'amico -->
                     <div id="chat-option">
                         <span>  <i class="fas fa-search"></i></span>
                         <span> <i class="fas fa-paperclip"></i></span>
@@ -91,6 +101,7 @@
                     </div>
                 </div>
 
+                <!-- chat -->
                 <div class="chat-friend">
 
                     <div id="container-chat">
@@ -108,7 +119,7 @@
 
                     </div>
 
-
+                    <!-- parte inferirore della chat con emoji e input -->
                     <div id="input-message">
                         <div class="emoji">
                             <i class="far fa-smile"></i>

@@ -84,18 +84,15 @@ var boolzapp = new Vue({
                         text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     }
-                ],
+                ]
             },
         ]
 
     },
     methods: {
-        newChat: function(){
-            if(this.activeChat === this.contacts.length -1){
-                this.activeChat = 0;
-            }else{
-                this.activeChat ++;
-            }
+        newChat(i){
+            
+            this.activeChat = i;
         }
     }
 });
