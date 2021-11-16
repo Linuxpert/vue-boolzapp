@@ -69,7 +69,7 @@ main{
     justify-content: space-around;
 }
 #option .fas{
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(138, 135, 135);
     cursor: pointer;
 }
@@ -153,6 +153,10 @@ main{
     background-color: white;
 }
 
+.box-chat.active{
+    background-color: rgba(146, 143, 143, 0.205);
+}
+
 .img-avatar {
     height: 60px;
     width: 60px;
@@ -203,6 +207,50 @@ main{
     height: calc(100% - 70px);
 }
 
+#container-chat{
+    width: 80%;
+    height: calc(100% - 100px);
+    margin-bottom: 50px;
+    position: absolute;
+    top: 20px;
+    left: 85px;
+    /* debug */
+    /* background-color: blue; */
+}
+
+.sent{
+    /* float: right; */
+    background-color: greenyellow;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 0 10px 70%;
+    /* display: none; */
+
+}
+/* .sent.active{
+    display: block;
+} */
+.received{
+    /* float: left; */
+    background-color: rgb(230, 231, 227);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 70% 10px 0;
+    /* display: none; */
+}
+/* .received.active{
+    display: block;
+} */
+
+.data{
+    font-size: 10px;
+    color: grey;
+    float: right;
+    /* display: none; */
+}
+/* .data.active{
+    display: block;
+} */
 #chat-option{
     width: 30% ;
     display: flex;
@@ -210,7 +258,7 @@ main{
     justify-content: space-evenly;
 }
 #chat-option .fas{
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(138, 135, 135);
     cursor: pointer;
 }

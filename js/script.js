@@ -1,6 +1,7 @@
 var boolzapp = new Vue({
     el: "#people",
     data:{
+        activeChat: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -52,7 +53,7 @@ var boolzapp = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: '28/03/2020 1 0:10:40',
+                        date: '28/03/2020 10:10:40',
                         text: 'La Marianna va in campagna',
                         status: 'received'
                     },
@@ -74,18 +75,29 @@ var boolzapp = new Vue({
                 visible: true,
                 messages: [
                     {
-                        date: ' 10/01/2020 1 5:30:55',
-                        text: ' Lo s ai c he h a a perto u na n uova p izzeria?',
-                        status: ' sent'
+                        date: '10/01/2020 15:30:55',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
+                        status: 'sent'
                     },
                     {
-                        date: ' 10/01/2020 1 5:50:00',
-                        text: ' Si, m a p referirei a ndare a l c inema',
-                        status: ' received'
+                        date: ' 10/01/2020 15:50:00',
+                        text: ' Si, ma preferirei andare al cinema',
+                        status: 'received'
                     }
                 ],
             },
         ]
 
+    },
+    methods: {
+        newChat: function(){
+            // if(this.activeChat === this.contacts.length -1){
+            //     this.activeChat = 0;
+            // }else{
+            //     this.activeChat ++;
+            // }
+            this.activeChat = this.contacts[i].length
+            console.log(activeChat);
+        }
     }
 });
