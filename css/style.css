@@ -278,8 +278,14 @@ main{
     border-radius: 10px;
 }
 
-#enter-text input {
+#mex {
     border: none;
+    width: 100%;
+    height: 25px;
+}
+
+#mex:focus{
+    outline: none;
 }
 
 .emoji{

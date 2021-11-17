@@ -110,10 +110,9 @@ var boolzapp = new Vue({
         },
 
         addText() {
-            this.contacts.find((element) => {
-                element.messages.push(this.newText);
-                setTimeout(() => element.messages.push(this.answer), 1000)
-            });
+            const element = this.contacts[this.activeChat];
+            element.messages.push(this.newText);
+            setTimeout(() => element.messages.push(this.answer), 1000);
 
             this.newText = {
                 date: now,
