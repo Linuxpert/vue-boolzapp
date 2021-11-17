@@ -1,6 +1,18 @@
+now = new Date().toUTCString();
 var boolzapp = new Vue({
     el: "#container-messages",
     data:{
+        newText: {
+            date: now,
+            text: '',
+            status: 'sent'
+        }, 
+        
+        answer: {
+            date: now,
+            text: 'ok',
+            status: 'sent'
+        },  
         activeChat: 0,
         contacts: [
             {
@@ -89,10 +101,33 @@ var boolzapp = new Vue({
         ]
 
     },
+    
     methods: {
         newChat(i){
-            
+
             this.activeChat = i;
-        }
+
+        },
+
+        addText() {
+            this.contacts.find((element) => {
+                element.messages.push(this.newText);
+                setTimeout(() => element.messages.push(this.answer), 1000)
+            });
+
+            this.newText = {
+                date: now,
+                text: '',
+                status: 'sent'
+            }
+
+            this.answer = {
+                date: now,
+                text: 'ok',
+                status: 'received'
+            }
+        },
+
+        
     }
 });

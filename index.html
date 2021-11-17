@@ -89,7 +89,7 @@
                         </div>
                         <div class="name-friend">
                             <h1>{{contacts[activeChat].name}}</h1>
-                            <p>Ultimo accesso alle: {{contacts[activeChat].messages[activeChat].date}}</p>
+                            <p>Ultimo accesso alle:</p>
                         </div>
                     </div>
 
@@ -126,7 +126,7 @@
                         </div>
 
                         <div id="enter-text">
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio" v-model="newText.text" @keyup.enter="addText">
                         </div>
 
                         <div class="emoji">
