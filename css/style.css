@@ -1,4 +1,6 @@
 /* generali */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,6 +16,7 @@
 
 body {
     background-color: rgb(224, 224, 224);
+    font-family: 'Lato', sans-serif;
 }
 /* messaggi */
 #container-messages{
