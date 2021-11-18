@@ -2,6 +2,7 @@ now = new Date().toUTCString();
 var boolzapp = new Vue({
     el: "#container-messages",
     data:{
+        ricercaChat: "",
         newText: {
             date: now,
             text: '',
@@ -125,8 +126,8 @@ var boolzapp = new Vue({
                 text: 'ok',
                 status: 'received'
             }
-        },
-
+        }
+        
         
     }
 });

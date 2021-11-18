@@ -58,12 +58,12 @@
                             <i class="fas fa-search"></i>
                         </div>
                         
-                        <input type="text" placeholder="cerca o inizia una nuova chat" id="search-inp">
+                        <input type="text" placeholder="cerca o inizia una nuova chat" id="search-inp" v-model="ricercaChat">
                     </div>
                 </div>
                 <!-- chat -->
                 <div id="people">
-                    <div class="box-chat" v-for="contact , i in contacts" :key="i" :class="i === activeChat ? 'active' : '' " @click="newChat(i)">
+                    <div class="box-chat" v-for="contact , i in contacts" :key="i" :class="i === activeChat ? 'active' : '' " @click="newChat(i)" v-if="contact.name.toLowerCase().includes(ricercaChat.toLowerCase())">
                         <div class="img-avatar">
                             <img :src="contact.avatar" :alt="contact.name">
                         </div>
